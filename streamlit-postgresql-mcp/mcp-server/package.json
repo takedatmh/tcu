@@ -1,0 +1,23 @@
+{
+  "name": "postgresql-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for PostgreSQL database access with natural language queries",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build"
+  },
+  "keywords": ["mcp", "postgresql", "database", "sql"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.7.2"
+  }
+}
